@@ -38,3 +38,15 @@ session에 SecurityContext를 저장한다
 
 인증 후라면 session에서 SecurityContext를 load하고 SecurityContextHolder에 저장
 ```
+
+## 7. FilterSecurityInterceptor
+```
+FilterChainProxy의 N개의 필터 중 마지막에 위치한 필터
+인증된 사용자에 대하여 특정 요청의 승인/거부 여부를 최종결정(AccessDecisionManager, AccessDecisionVoter)
+인증객체 없이 보호자원에 접근시 AuthenticationException
+인증 후 자원에 접근 가능한 권한이 존재하지 않을 경우 AccessDeniedException
+권한처리를 AccessDecisionManager에게 맡김
+권한 제어 방식 중 HTTP 자원의 보안을 처리하는 필터
+```
+![summary](/img/summary.PNG)
+V
